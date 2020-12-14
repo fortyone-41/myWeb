@@ -1,0 +1,12 @@
+.content {
+  padding-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  grid-area: content;
+  text-align: center;
+
+}
+
+.content p {
+  font-size:150%;
+}
