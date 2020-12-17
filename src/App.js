@@ -1,20 +1,17 @@
 import React from 'react'
 import { BrowserRouter } from 'react-router-dom';
-import './App.css';
-import Content from './Components/Content/Content';
-import Header from './Components/Header/Header';
-import Navbar from './Components/Navbar/Navbar';
+import Window from './Pages/Window/Window';
 
+import './styles/index.scss'
 
 function App() {
   return (
-    <div className='body'>
+    <div className="wrapper">
       <BrowserRouter>
-      <Header />
-      <Navbar />
-      <Content />
+        <Window />
       </BrowserRouter>
     </div>
+
   );
 }
 

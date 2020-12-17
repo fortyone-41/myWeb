@@ -1,0 +1,75 @@
+.window {
+  height: 100%;
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  background-color: darkslategray;
+  grid-area: "nav";
+  &__logo img {
+    display: flex;
+    justify-content: left;
+    width: 64px;
+    height: 64px;
+  }
+
+  &__link {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+.content {
+  position: relative;
+  height: 800px;
+  padding-top: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 4fr 0.1fr 4fr;
+  grid-template-areas: "dialog divide info";
+  height: 100%;
+}
+
+.divider {
+  grid-area: "divide";
+  height: 100%;
+}
+
+.dialog {
+  grid-area: "dialog";
+
+}
+
+.info {
+  grid-area: "info";
+  text-align: center;
+  align-items: center;
+
+  h1 {
+    font-size: 36px;
+    font:bold;
+    padding-bottom: 10px;
+  }
+  h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.1px;
+    opacity: 0.5;
+    padding-bottom: 5px;
+  }
+}
+
+.projects {
+  padding-left: 40px;
+}
