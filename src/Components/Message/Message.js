@@ -28,9 +28,9 @@ const Message = (props) => {
                             <p>{props.text}</p>
                             {props.isMe && (
                                 <Radio.Group >
-                                    <NavLink  onClick={ addMes} to="/info" ><Radio.Button>Биография</Radio.Button></NavLink>
+                                    <NavLink  onClick={ addMes} to="/info" ><Radio.Button>Биографию</Radio.Button></NavLink>
                                     <NavLink onClick={ addMes} to="/projects" ><Radio.Button>Проекты</Radio.Button></NavLink>
-
+                                    <NavLink  onClick={ addMes} to="/contacts" ><Radio.Button>Контакты</Radio.Button></NavLink>
                                 </Radio.Group>
                             )}
                         </div>

@@ -1,55 +1,49 @@
 import React from 'react'
-import { Tabs, Radio } from 'antd';
+import { Tabs} from 'antd';
 import {ChromeOutlined } from '@ant-design/icons';
 import Block from '../../../Components/Block/Block';
+import Query from './Imports/Query'
+import Plan from './Imports/Plan'
+import Visit from './Imports/Visit'
+import ModalWindow from './ModalWindow/ModalWindow';
 
 
 const Projects = () => {
     const { TabPane } = Tabs;
     return (
         <div className="projects">
-            <Tabs style={{height:'100%'}} tabPosition="left" defaultActiveKey="1">
-                <TabPane  style={{height:'100%'}}
-                    tab={
-                        <span>
-                            <ChromeOutlined />
+            <Tabs style={{height:'100%'}} tabPosition="top" type="card" defaultActiveKey="1">
+                <TabPane style={{height:'1000px'}} tab={
+                <span>
+                    <ChromeOutlined />
           Регистрация заявок
         </span>
-                    }
-                    key="1"
-                > <div style={{height:'100%'}}>
-                <Block>
-                        Tab 1
-                    </Block>
-                    </div>
+            }
+            key="1"
+        >
+                <ModalWindow galery={Query} title="Регистрация заявок" tools="HTML, CSS, PHP, JS, MySQL"/>
                 </TabPane>
-                <TabPane
-                    tab={
-                        <span>
-                            <ChromeOutlined />
-          Планировщик отпуска
+                <TabPane tab={
+                <span>
+                    <ChromeOutlined />
+                    Планирование отпуска
         </span>
-                    }
-                    key="2"
-                ><div>
-                    <Block>
-                        Tab 2
-                    </Block>
-                    </div>
-    </TabPane>
-                <TabPane
-                    tab={
-                        <span>
-                            <ChromeOutlined />    Этот сайт :) :
-                        </span>
-                    }
-                    key="3"
-                ><div>
-                    <Block>
-                        Tab 3
-                    </Block>
-                    </div>
-    </TabPane>
+            }
+            key="2"
+        >
+                <ModalWindow galery={Plan} title="Планирование отпуска" tools="HTML, CSS, PHP, JS, MySQL" />
+                </TabPane>
+                <TabPane tab={
+                <span>
+                    <ChromeOutlined />
+                    Этот сайт
+        </span>
+            }
+            key="3"
+        >
+                <ModalWindow galery={Visit} title="Этот сайт" tools="ReactJS, AntDesign, SCSS"/>
+                </TabPane>
+                
             </Tabs>
         </div>
     )
