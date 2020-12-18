@@ -18,9 +18,9 @@ const Content = () => {
             </div>
             <div className="view">
                 <Route exact path='/' render={(props) => <Empty style={{ alignItems: "center", height: '100%', display: 'flex', border: '1px solid #ececec', justifyContent: 'center', textAlign: 'center' }} description={"Информация отсутствует"} />} />
-                <Route exact path='/info' component={Info} />
-                <Route exact path='/projects' component={Projects} />
-                <Route exact path='/contacts' component={Contacts} />
+                <Route exact path='/info' render={(props) => <Info title="Биографию" />} />
+                <Route exact path='/projects' render={(props) => <Projects title="Проекты" />} />
+                <Route exact path='/contacts' render={(props) => <Contacts title="Контакты" />} />
             </div>
         </div>
     )

@@ -1,6 +1,6 @@
 import Navbar from '../../Modules/Navbar/Navbar'
 import Content from '../../Modules/Content/Content'
-
+import Rabbit from '../../media/img/git.png'
 
 import React from 'react';
 import './Window.scss'
@@ -13,6 +13,7 @@ const Window = () => {
                   <Navbar />
 
                   <Content />
+                  <a target="_blank" href="https://github.com/fortyone-41"><img className="rabbit" src={Rabbit} /></a>
             </section>
       )
 }

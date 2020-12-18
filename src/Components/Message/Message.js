@@ -8,16 +8,25 @@ import { Radio } from 'antd'
 import './Message.scss'
 import { NavLink } from 'react-router-dom';
 
-const Message = (props) => {
-    let text
 
-    function addMes() {
-        props.removeMessage();
-        props.addMessage();
+const Message = (props) => {
+    function pageInfo() {
+            props.removeMessage();
+            props.addMessage("Биографию");
     }
-    let newElementText = React.createRef()
+    function pageProjects() {
+            props.removeMessage();
+            props.addMessage("Проекты");
+    }
+    function pageContacts() {    
+            props.removeMessage();
+            props.addMessage("Контакты");
+    }
+    
+
     return (
         <div className={classNames(`message`, { "message--isme": props.isMe })}>
+
             <div className="message__content">
                 <div className="message__avatar">
                     <img src={props.avatar} alt={`Avatar ${props.user.fullname}`} />
@@ -28,9 +37,9 @@ const Message = (props) => {
                             <p>{props.text}</p>
                             {props.isMe && (
                                 <Radio.Group >
-                                    <NavLink  onClick={ addMes} to="/info" ><Radio.Button>Биографию</Radio.Button></NavLink>
-                                    <NavLink onClick={ addMes} to="/projects" ><Radio.Button>Проекты</Radio.Button></NavLink>
-                                    <NavLink  onClick={ addMes} to="/contacts" ><Radio.Button>Контакты</Radio.Button></NavLink>
+                                    <NavLink onClick={pageInfo} to="/info" ><Radio.Button>Биографию</Radio.Button></NavLink>
+                                    <NavLink onClick={pageProjects} to="/projects" ><Radio.Button>Проекты</Radio.Button></NavLink>
+                                    <NavLink onClick={pageContacts} to="/contacts" ><Radio.Button>Контакты</Radio.Button></NavLink>
                                 </Radio.Group>
                             )}
                         </div>
@@ -42,7 +51,7 @@ const Message = (props) => {
                 </div>
             </div>
             {props.isMe && (
-                <div name="anchor"></div>
+                <div id="boom"></div>
             )}
         </div>
     )
