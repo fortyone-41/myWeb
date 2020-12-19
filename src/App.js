@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="wrapper">
       <BrowserRouter>
+      
         <Window />
       </BrowserRouter>
     </div>
