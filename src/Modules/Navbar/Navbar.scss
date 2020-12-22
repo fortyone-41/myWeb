@@ -3,21 +3,12 @@
     width: 100%;
     background-color: darkslategray;
     grid-area: "nav";
-    padding-left: 10%;
-    padding-right: 10%;
+
     &__logo img {
       display: flex;
       justify-content: left;
       width: 64px;
       height: 64px;
-    }
-  
-    &__link {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      align-items: center;
     }
   }
   

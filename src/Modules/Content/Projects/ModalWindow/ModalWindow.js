@@ -14,7 +14,7 @@ const ModalWindow = (props) => {
                         <Carousel effect="fade" autoplay>
                             {props.galery.map((photo) => {
                                 return (<div>
-                                    <img onClick={() => setVisible(true)} style={{ width: '100%', borderRadius: '5px' }} src={photo} />
+                                    <img onClick={() => setVisible(true)} style={{ width: '750px', borderRadius: '5px' }} src={photo} />
                                 </div>)
                             })}
 

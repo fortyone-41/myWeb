@@ -10,8 +10,6 @@ const Navbar = () => {
             <div className="navbar__logo">
                 <NavLink to="/"><img src={logo} /></NavLink>
             </div>
-            <div className="navbar__link">
-            </div>
         </nav>
     )
 }
