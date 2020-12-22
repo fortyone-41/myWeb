@@ -9,7 +9,10 @@
   border: 1px solid #ececec;
   border-radius: 3px;
   height: 800px;
-  max-width: 751px;
+  width:100%;
+  .img {
+      width: 100%;
+  }
   .ant-carousel {
     ul {
       li {

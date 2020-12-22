@@ -14,7 +14,7 @@ const ModalWindow = (props) => {
                         <Carousel effect="fade" autoplay>
                             {props.galery.map((photo) => {
                                 return (<div>
-                                    <img onClick={() => setVisible(true)} style={{ width: '750px', borderRadius: '5px' }} src={photo} />
+                                    <img width='751px' onClick={() => setVisible(true)} style={{  borderRadius: '5px' }} src={photo} />
                                 </div>)
                             })}
 
@@ -34,13 +34,13 @@ const ModalWindow = (props) => {
                         visible={visible}
                         onOk={() => setVisible(false)}
                         onCancel={() => setVisible(false)}
-                        width={1000}
+                        width='1000px'
                     >
                         <section className="carous">
                             <Carousel effect="fade" autoplay>
                                 {props.galery.map((photo) => {
                                     return (<div>
-                                        <img style={{ width: '100%', borderRadius: '5px' }} src={photo} />
+                                        <img width='100%' style={{  borderRadius: '5px' }} src={photo} />
                                     </div>)
                                 })}
                             </Carousel>

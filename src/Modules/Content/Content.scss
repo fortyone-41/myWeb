@@ -6,7 +6,7 @@
     padding-right: 10%;
     text-align: center;
     display: grid;
-    grid-template-columns: 4fr 0.1fr 4fr;
+    grid-template-columns: 49.5% 1% 49.5%;
     grid-template-areas: "dialog divide info";
     height: 800px;
   }
@@ -23,7 +23,6 @@
   .view {
     height: 800px;
     grid-area: "info";
-    max-width: 751px;
     .block {
       padding: 45px;
     }
