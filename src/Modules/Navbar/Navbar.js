@@ -1,7 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import logo from '../../media/img/logo2 (3).png'
+import logo from '../../media/img/logo.gif'
 import { Button } from 'antd'
+import './Navbar.scss'
 
 const Navbar = () => {
     return (
@@ -10,7 +11,6 @@ const Navbar = () => {
                 <NavLink to="/"><img src={logo} /></NavLink>
             </div>
             <div className="navbar__link">
-
             </div>
         </nav>
     )

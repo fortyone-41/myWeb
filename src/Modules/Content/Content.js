@@ -5,7 +5,7 @@ import Info from './Info/Info'
 import Projects from './Projects/Projects'
 import { Empty } from 'antd'
 import Contacts from './Contacts/Contacts'
-
+import './Content.scss'
 
 const Content = () => {
     return (

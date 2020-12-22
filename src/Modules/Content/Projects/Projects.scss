@@ -1,0 +1,53 @@
+.projects {
+  .block {
+    padding: 0 !important;
+    height: 800px !important;
+  }
+  section {
+    height: 265px;
+  }
+  border: 1px solid #ececec;
+  border-radius: 3px;
+  height: 800px;
+  max-width: 751px;
+  .ant-carousel {
+    ul {
+      li {
+        button {
+          height: 5px;
+          background-color: rgb(145, 255, 0);
+        }
+      }
+      li.slick-active {
+        button {
+          height: 5px;
+          background-color: #a30606;
+        }
+      }
+    }
+    
+  }
+  .carous {
+      background-color: red;
+  }
+
+  .tools {
+    padding: 0;
+    list-style: none;
+  }
+  .tools li {
+    padding: 5px;
+    cursor: pointer;
+  }
+  .tools li:before {
+    padding-right: 9px;
+    font-weight: bold;
+    color: #6f6c6c;
+    content: "\2714";
+    transition-duration: 0.4s;
+  }
+  .tools li:hover:before {
+    color: #2369a5;
+    content: "\2714";
+  }
+}

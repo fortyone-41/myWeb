@@ -1,0 +1,30 @@
+.content {
+    position: relative;
+    height: 800px;
+    padding-top: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 4fr 0.1fr 4fr;
+    grid-template-areas: "dialog divide info";
+    height: 800px;
+  }
+  
+  .divider {
+    grid-area: "divide";
+    height: 800px;
+  }
+  
+  
+  
+  
+  
+  .view {
+    height: 800px;
+    grid-area: "info";
+    max-width: 751px;
+    .block {
+      padding: 45px;
+    }
+  }

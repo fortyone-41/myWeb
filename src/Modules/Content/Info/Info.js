@@ -28,16 +28,16 @@ const Info = () => {
                                 Занимался обслуживанием АРМ, установка/настройка ПО, администрирование корпоративной сети передачи данных.
                                 
                         </Timeline.Item>
-                            <Timeline.Item color="red">В процессе разработал проект бесшовной Wi-Fi сети, с использованием Radius-сервера.</Timeline.Item>
+                            <Timeline.Item>В процессе разработал проект бесшовной Wi-Fi сети, с использованием Radius-сервера.</Timeline.Item>
                             <Timeline.Item>Прошел обучающий курс по использованию сетевого оборудования CISCO</Timeline.Item>
-                            <Timeline.Item>Уволился 16.09.2019</Timeline.Item>
-                            <Timeline.Item dot={<ClockCircleOutlined style={{ fontSize: '16px' }} />}>
+                            <Timeline.Item color="red">Уволился 16.09.2019</Timeline.Item>
+                            <Timeline.Item dot={<ClockCircleOutlined style={{ fontSize: '16px' }} />}  color="green">
                                 17.09.2019 Устроился на работу в ООО "Норильскникельремонт" МПО "Норильскавтоматика"
                         </Timeline.Item>
                         <Timeline.Item>Занимался администрированием SCADA-системы.</Timeline.Item>
                         <Timeline.Item>Разработал Web-систему приема заявок о неисправностях SCADA-системы.</Timeline.Item>
                         <Timeline.Item>Разработал Web-систему планирования отпуска со сквозной доменной авторизацией. Планирование происходит на основе графика отпусков, и свободных путевок в БД. </Timeline.Item>
-                        <Timeline.Item>Трудоустроен по сегодняшний день.</Timeline.Item>
+                        <Timeline.Item  color="red">Трудоустроен по сегодняшний день.</Timeline.Item>               
                         </Timeline>
                     </TabPane>
                 </Tabs>

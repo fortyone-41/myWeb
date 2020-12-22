@@ -1,5 +1,6 @@
 import React from 'react'
 import Block from '../../../Components/Block/Block'
+import './Contacts.scss'
 
 const Contacts = () => {
     return (

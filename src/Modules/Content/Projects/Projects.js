@@ -6,6 +6,7 @@ import Query from './Imports/Query'
 import Plan from './Imports/Plan'
 import Visit from './Imports/Visit'
 import ModalWindow from './ModalWindow/ModalWindow';
+import './Projects.scss'
 
 
 const Projects = () => {
@@ -36,12 +37,12 @@ const Projects = () => {
                 <TabPane tab={
                 <span>
                     <ChromeOutlined />
-                    Этот сайт
+                    Сайт-визитка
         </span>
             }
             key="3"
         >
-                <ModalWindow galery={Visit} title="Этот сайт" tools="ReactJS, AntDesign, SCSS"/>
+                <ModalWindow galery={Visit} title="Сайт-визитка" tools="ReactJS, AntDesign, SCSS"/>
                 </TabPane>
                 
             </Tabs>
