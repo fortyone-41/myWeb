@@ -3,6 +3,8 @@
     width: 100%;
     background-color: darkslategray;
     grid-area: "nav";
+    padding-left: 10%;
+    padding-right: 10%;
     &__logo img {
       display: flex;
       justify-content: left;
