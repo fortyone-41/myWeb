@@ -2,7 +2,7 @@ import Navbar from '../../Modules/Navbar/Navbar'
 import Content from '../../Modules/Content/Content'
 
 
-import React, {useState} from 'react';
+import React from 'react';
 import './Window.scss'
 import Loader from '../../Modules/Content/Loader/Loader';
 
