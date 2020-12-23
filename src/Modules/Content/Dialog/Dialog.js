@@ -23,7 +23,9 @@ const Dialog = () => {
         return text;
     }
     function addMessage(text) {
-
+        if(message.length>=12){
+            setMessage(message.shift())
+        }
         setMessage(message.concat(
             {
                 id: message.length + 1,

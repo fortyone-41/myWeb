@@ -14,10 +14,9 @@ const Content = () => {
             <Route exact path='/Skills' component={Skills} />
             <Route exact path='/Contacts' component={Contacts} /> */}
             <Dialog />
-            <div className="divider">
-            </div>
+            <div className="divider"/>
             <div className="view">
-                <Route exact path='/' render={(props) => <Empty style={{ alignItems: "center", height: '100%', display: 'flex', border: '1px solid #ececec', justifyContent: 'center', textAlign: 'center' }} description={"Информация отсутствует"} />} />
+                <Route exact path='/' render={(props) => <Empty className="empty" description={"Информация отсутствует"} />} />
                 <Route exact path='/info' render={(props) => <Info title="Биографию" />} />
                 <Route exact path='/projects' render={(props) => <Projects title="Проекты" />} />
                 <Route exact path='/contacts' render={(props) => <Contacts title="Контакты" />} />
