@@ -1,8 +1,8 @@
 .info {
-  height: 800px;
+  height: 100%;
   border: 1px solid #ececec;
   border-radius: 3px;
-  
+  overflow: auto;
   h1 {
     font-size: 36px;
     font: bold;
@@ -34,7 +34,7 @@
         background-color: rgba(0,0,0,0.5);
     }
   .card-container > .ant-tabs-card .ant-tabs-content {
-    height: 744px;
+    height: 100%;
     margin-top: -16px;
     overflow: auto;
   }

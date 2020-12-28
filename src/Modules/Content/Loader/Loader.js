@@ -1,4 +1,12 @@
-import React from 'react' 
+import React from 'react'
 import './Loader.scss'
 
-export default () => <div className="loader"><div className="lds-dual-ring" /></div>
+function Loader() {
+    return (
+        <div className="loader">
+            <div className="lds-dual-ring" />
+        </div>
+    )
+}
+
+export default Loader

@@ -1,11 +1,9 @@
 import React from 'react'
-import Block from '../../../Components/Block/Block'
 import './Contacts.scss'
 
 const Contacts = () => {
     return (
         <div className='contacts'>
-            <Block>
                 <h1>Контакты</h1>
                 <ul>
                     <li>
@@ -21,14 +19,13 @@ const Contacts = () => {
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://join.skype.com/invite/mbTX1YQuuQ5K">
+                        <a target="_blank" rel="noreferrer" href="https://join.skype.com/invite/mbTX1YQuuQ5K">
                             <h2>Skype</h2>
                             <p>vova-lutcev</p>
                         </a>
                     </li>
                     
                 </ul>
-            </Block>
         </div>
     )
 }

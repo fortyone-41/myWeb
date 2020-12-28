@@ -1,32 +1,44 @@
 .content {
   position: relative;
-  height: 800px;
-  padding-top: 20px;
+  height: 90%;
+  padding-top: 1%;
   padding-left: 10%;
   padding-right: 10%;
   text-align: center;
-  display: grid;
-  grid-template-columns: 49.5% 1% 49.5%;
-  grid-template-areas: "dialog divide info";
+  //display: grid;
+  //grid-template-columns: 49.5% 1% 49.5%;
+  //grid-template-areas: "dialog divide info";
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 
-  .divider {
-    grid-area: "divide";
-    height: 800px;
+  .block {
+    width: 49.5% !important;
+    @media (max-width: 768px) {
+      width: 100% !important;
+      height: 70% !important;
+      max-height: 30% !important;
+    }
   }
 
   .view {
-    height: 800px;
-    grid-area: "info";
-    overflow: auto;
-    width: 100%;
+    height: 100%;
+    //grid-area: "info";
+    width: 49.5%;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+    overflow: hidden;
     .block {
-      padding: 45px;
+      padding: 1%;
     }
     .empty {
       align-items: center;
       height: 100%;
       display: flex;
-      //border: 1px solid #ececec;
+      border: 1px solid #ececec;
       justify-content: center;
       text-align: "center";
     }

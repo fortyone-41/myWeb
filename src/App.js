@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
       
         <Window />
-        <a target="_blank" href="https://github.com/fortyone-41"><img className="cat-logo" src={catLogo} /></a>
+        <a target="_blank" rel="noreferrer" href="https://github.com/fortyone-41"><img className="cat-logo" alt="github link" src={catLogo} /></a>
       </BrowserRouter>
     </div>
 

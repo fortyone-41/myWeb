@@ -1,15 +1,13 @@
 import React, { useState } from 'react'
-import { scrollTo as scroll } from "react-scroll"
-import { Carousel, Anchor } from 'antd'
+
 
 import Message from '../../../Components/Message/Message'
 import Block from '../../../Components/Block/Block'
 import './Dialog.scss';
-import { Route } from 'react-router-dom';
 const AVATAR = "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png";
 
 
-const Dialog = () => {
+const Dialog = (props) => {
     const messagesRef = React.useRef(null);
 
     const [message, setMessage] = useState([
@@ -50,7 +48,7 @@ const Dialog = () => {
             <div className="dialog" ref={messagesRef}>
 
                 {message.map((mes) => {
-                    return <Message addMessage={addMessage} getPage={getPage} removeMessage={removeMessage} avatar={mes.avatar} text={mes.text} isMe={mes.isMe} date={mes.date} />
+                    return <Message focus={props.focus} addMessage={addMessage} getPage={getPage} removeMessage={removeMessage} avatar={mes.avatar} text={mes.text} isMe={mes.isMe} date={mes.date} />
                 })
                 }
             </div>

@@ -1,20 +1,18 @@
 import React, { useState } from 'react'
-import { Tabs, Radio, Modal, Button, Carousel } from 'antd';
-import { ChromeOutlined } from '@ant-design/icons';
-import Block from '../../../../Components/Block/Block';
+import {  Modal, Carousel } from 'antd';
+
 
 
 const ModalWindow = (props) => {
     const [visible, setVisible] = useState(false);
     return (
         <div>
-            <div style={{ height: '100%' }}>
-                <Block>
+            <div style={{ height: '100%'}}>
                     <section >
                         <Carousel effect="fade" autoplay>
                             {props.galery.map((photo) => {
                                 return (<div>
-                                    <img width='751px' onClick={() => setVisible(true)} style={{  borderRadius: '5px' }} src={photo} />
+                                    <img width='100%' alt={props.title} onClick={() => setVisible(true)} style={{  borderRadius: '5px' }} src={photo} />
                                 </div>)
                             })}
 
@@ -40,14 +38,12 @@ const ModalWindow = (props) => {
                             <Carousel effect="fade" autoplay>
                                 {props.galery.map((photo) => {
                                     return (<div>
-                                        <img width='100%' style={{  borderRadius: '5px' }} src={photo} />
+                                        <img width='100%' alt={props.title} style={{  borderRadius: '5px' }} src={photo} />
                                     </div>)
                                 })}
                             </Carousel>
                             </section>
                     </Modal>
-                    
-                </Block>
             </div>
         </div>
     )

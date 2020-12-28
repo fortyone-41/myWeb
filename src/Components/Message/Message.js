@@ -23,7 +23,7 @@ const Message = (props) => {
             props.addMessage("Контакты");
     }
     
-
+ 
     return (
         <div className={classNames(`message`, { "message--isme": props.isMe })}>
 

@@ -8,20 +8,24 @@ import Contacts from './Contacts/Contacts'
 import './Content.scss'
 
 const Content = () => {
+    const FOCUS_BLOCK = React.useRef()
+    const focus = () => {
+        FOCUS_BLOCK.current.focus();
+    }
     return (
         <div className='content'>
             {/* <Route exact path='/Dialog' component={Dialog} />
             <Route exact path='/Skills' component={Skills} />
             <Route exact path='/Contacts' component={Contacts} /> */}
-            <Dialog />
-            <div className="divider"/>
-            <div className="view">
+            <Dialog ref={FOCUS_BLOCK.current} />
+            
+            <div focus={focus} className="view">
                 <Route exact path='/' render={(props) => <Empty className="empty" description={"Информация отсутствует"} />} />
                 <Route exact path='/info' render={(props) => <Info title="Биографию" />} />
                 <Route exact path='/projects' render={(props) => <Projects title="Проекты" />} />
                 <Route exact path='/contacts' render={(props) => <Contacts title="Контакты" />} />
             </div>
-        </div>
+        </div> 
     )
 }
 
