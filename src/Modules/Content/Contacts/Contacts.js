@@ -24,7 +24,12 @@ const Contacts = () => {
                             <p>vova-lutcev</p>
                         </a>
                     </li>
-                    
+                    <li>
+                        <a target="_blank" rel="noreferrer" href="https://norilsk.hh.ru/resume/94604414ff088307000039ed1f51695a717a48">
+                            <h2>Резюме HH.ru</h2>
+                            <p>FrontEnd разработчик</p>
+                        </a>
+                    </li>
                 </ul>
         </div>
     )

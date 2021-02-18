@@ -1,6 +1,5 @@
 @import "../../styles/variables";
 
-
 .message {
   $self: &;
   display: flex;
@@ -44,12 +43,9 @@
     line-height: 20px;
   }
 
-
   &--isme {
     display: flex;
     flex-direction: row-reverse;
-    
- 
 
     #{$self}__content {
       display: flex;
@@ -60,7 +56,6 @@
         max-width: 100%;
         width: 100%;
       }
-      
     }
 
     #{$self}__avatar {
@@ -73,7 +68,6 @@
     #{$self}__info {
       align-items: center;
       text-align: right;
-
     }
 
     #{$self}__bubble {
@@ -83,9 +77,12 @@
       border-radius: 12px 12px 0px 12px;
       #{$self}__text {
         color: $black;
+        margin-left: 10px;
+        margin-right: 10px;
+        label {
+          width: 100%;
+        }
       }
     }
-
-    
   }
 }
