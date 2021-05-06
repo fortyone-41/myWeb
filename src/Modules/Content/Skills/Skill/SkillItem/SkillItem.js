@@ -5,10 +5,10 @@ const SkillItem = ({ item, ind }) => {
     React.useEffect(() => {
         setTimeout(() => {
             setVisible("block")
-        }, 1000*(ind+3))
+        }, 1000*(ind))
     }, [])
     return (
-        <div key={ind} style={{display: visible}} className="bounce-enter-active">
+        <div  key={ind} style={{display: visible, margin: "20px"}} className="bounce-enter-active">
             <h3>&#128504;{item}</h3>
         </div>
     );
