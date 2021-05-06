@@ -28,20 +28,13 @@ const Message = (props) => {
                     <div className="message__bubble">
                         <div className="message__text">
                             <p>{props.text}</p>
-                            {props.isMe && (
-                                <Radio.Group >
-                                    <p style={{display: "inline-block"}}><NavLink onClick={() => page("Биографию")} to="/info" ><Radio.Button>Биографию</Radio.Button></NavLink></p>
-                                    <p style={{display: "inline-block"}}><NavLink onClick={() => page("Проекты")} to="/projects" ><Radio.Button>Проекты</Radio.Button></NavLink></p>
-                                    <p style={{display: "inline-block"}}><NavLink onClick={() => page("Контакты")} to="/contacts" ><Radio.Button>Контакты</Radio.Button></NavLink></p>
-                                    <p style={{display: "inline-block"}}><NavLink onClick={() => page("Навыки")} to="/skills" ><Radio.Button>Навыки</Radio.Button></NavLink></p>
-                                </Radio.Group>
-                            )}
+                            
                         </div>
 
                     </div>
-                    {!props.isMe && (
+                    
                         <span className="message__date">{formatDistanceToNow(new Date(props.date), { addSuffix: true, locale: ruLocale })}</span>
-                    )}
+                    
                 </div>
             </div>
             {props.isMe && (

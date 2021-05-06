@@ -1,6 +1,6 @@
 .dialog {
     //grid-area: "dialog";
-
+    
     max-height: 100%;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
@@ -8,6 +8,7 @@
       -ms-overflow-scrolling: touch;
       -o-overflow-scrolling: touch;
     padding: 5%;
+
   }
   
   .dialog::-webkit-scrollbar {

@@ -46,7 +46,7 @@
   &--isme {
     display: flex;
     flex-direction: row-reverse;
-
+    
     #{$self}__content {
       display: flex;
       max-width: 80%;

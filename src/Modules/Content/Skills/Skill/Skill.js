@@ -13,6 +13,7 @@ const Skill = ({ item, ind, skills }) => {
             <h2>{item}</h2>
             {skills[item].map((skill, index) => (
                 <SkillItem item={skill} ind={index} />
+                
             ))}
         </div>
     );
