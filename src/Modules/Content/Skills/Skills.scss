@@ -1,0 +1,60 @@
+.bounce-enter-active {
+    animation: bounce-in .5s;
+  }
+  .bounce-leave-active {
+    animation: bounce-in .5s reverse;
+  }
+
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+.skills {
+  text-align: center;
+  align-items: center;
+  margin-top: 10px;
+  height: 100%;
+  width: 100%;
+  .skills-block {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    overflow: auto;
+    padding: 0;
+  }
+  .block {
+    width: 100% !important;
+  }
+  h1 {
+    font-size: 36px;
+    font: bold;
+    padding-bottom: 10px;
+  }
+  h2 {
+    font-size: 28px;
+    font: bold;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }
+  h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.1px;
+    opacity: 0.5;
+    padding-bottom: 5px;
+  }
+  
+}

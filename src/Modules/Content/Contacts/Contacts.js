@@ -1,10 +1,10 @@
 import React from 'react'
 import './Contacts.scss'
 
-const Contacts = () => {
+const Contacts = (props) => {
     return (
         <div className='contacts'>
-                <h1>Контакты</h1>
+                <h1>{props.title}</h1>
                 <ul>
                     <li>
                         <a href="mailto:vova-lutcev@yandex.ru">

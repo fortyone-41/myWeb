@@ -10,18 +10,11 @@ import { NavLink } from 'react-router-dom';
 
 
 const Message = (props) => {
-    function pageInfo() {
+    function page(link) {
             props.removeMessage();
-            props.addMessage("Биографию");
+            props.addMessage(link);
     }
-    function pageProjects() {
-            props.removeMessage();
-            props.addMessage("Проекты");
-    }
-    function pageContacts() {    
-            props.removeMessage();
-            props.addMessage("Контакты");
-    }
+
     
  
     return (
@@ -37,9 +30,10 @@ const Message = (props) => {
                             <p>{props.text}</p>
                             {props.isMe && (
                                 <Radio.Group >
-                                    <p><NavLink onClick={pageInfo} to="/info" ><Radio.Button>Биографию</Radio.Button></NavLink></p>
-                                    <p><NavLink onClick={pageProjects} to="/projects" ><Radio.Button>Проекты</Radio.Button></NavLink></p>
-                                    <p><NavLink onClick={pageContacts} to="/contacts" ><Radio.Button>Контакты</Radio.Button></NavLink></p>
+                                    <p style={{display: "inline-block"}}><NavLink onClick={() => page("Биографию")} to="/info" ><Radio.Button>Биографию</Radio.Button></NavLink></p>
+                                    <p style={{display: "inline-block"}}><NavLink onClick={() => page("Проекты")} to="/projects" ><Radio.Button>Проекты</Radio.Button></NavLink></p>
+                                    <p style={{display: "inline-block"}}><NavLink onClick={() => page("Контакты")} to="/contacts" ><Radio.Button>Контакты</Radio.Button></NavLink></p>
+                                    <p style={{display: "inline-block"}}><NavLink onClick={() => page("Навыки")} to="/skills" ><Radio.Button>Навыки</Radio.Button></NavLink></p>
                                 </Radio.Group>
                             )}
                         </div>

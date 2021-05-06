@@ -6,6 +6,7 @@ import Projects from './Projects/Projects'
 import { Empty } from 'antd'
 import Contacts from './Contacts/Contacts'
 import './Content.scss'
+import Skills from './Skills/Skills'
 
 const Content = () => {
     const FOCUS_BLOCK = React.useRef()
@@ -24,6 +25,7 @@ const Content = () => {
                 <Route exact path='/info' render={(props) => <Info title="Биографию" />} />
                 <Route exact path='/projects' render={(props) => <Projects title="Проекты" />} />
                 <Route exact path='/contacts' render={(props) => <Contacts title="Контакты" />} />
+                <Route exact path='/skills' render={(props) => <Skills title="Навыки" />} />
             </div>
         </div> 
     )
