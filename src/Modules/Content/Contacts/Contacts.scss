@@ -5,6 +5,7 @@
     height: 100%;
     overflow: auto;
     width: 100%;
+    animation: showing 1.5s;
     .block {
       width: 100% !important;
     }
@@ -102,6 +103,24 @@
       -o-transform: scale(1.25);
       position:relative;
       z-index:5;
+    }
+  }
+
+  @keyframes showing {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    75% {
+      opacity: 0.75;
+    }
+    100% {
+      opacity: 1;
     }
   }
 
