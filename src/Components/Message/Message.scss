@@ -4,6 +4,7 @@
   $self: &;
   display: flex;
   width: 100%;
+  animation: bounce-in .5s;
   &__content {
     display: flex;
     max-width: 80%;
@@ -87,5 +88,17 @@
         }
       }
     }
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }

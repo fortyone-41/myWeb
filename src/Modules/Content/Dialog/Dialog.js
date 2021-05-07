@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 import Message from '../../../Components/Message/Message'
 import Block from '../../../Components/Block/Block'
 import './Dialog.scss';
+import { useHistory } from "react-router-dom";
+
 const AVATAR = "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png";
 
 
@@ -20,33 +22,42 @@ const Dialog = (props) => {
         return text;
     }
     function addMessage(text) {
-        if (message.length >= 12) {
-            setMessage(message.shift())
-        }
-        setMessage(message.concat(
-            {
-                id: message.length + 1,
-                text: "Показать " + text,
-                date: Date(),
-                isMe: true,
-                service: false
-            },
-            {
-                id: message.length + 2,
-                avatar: AVATAR,
-                text: "Вы выбрали " + text + ", показываю...",
-                date: Date()
-            },
-           
-        ))
+        setTimeout(() => {
+            setMessage(prev => ([
+                ...prev,
+                {
+                    id: message.length + 1,
+                    text: "Показать " + text,
+                    date: Date(),
+                    isMe: true,
+                    service: false
+                }
+            ]))
+        }, 0)
+
+        setTimeout(() => {
+            setMessage(prev => ([
+                ...prev,
+                {
+                    id: message.length + 2,
+                    avatar: AVATAR,
+                    text: "Вы выбрали " + text + ", показываю...",
+                    date: Date(),
+                    isMe: false
+                }
+
+            ]))
+        }, 1000)
     }
     function page(link) {
-       // removeMessage();
+        // removeMessage();
         addMessage(link);
     }
     function removeMessage() {
         message.splice(message.length - 1, 1);
     }
+
+    const history = useHistory();
 
     return (
 
@@ -58,13 +69,13 @@ const Dialog = (props) => {
                 })
                 }
             </div>
-            <div style={{ position: "absolute", bottom: 10, right: 20 }}>
-                <h1 style={{textAlign: "right", marginBottom: "10px"}}>Показать:</h1>
+            <div style={{ position: "absolute", bottom: 10, right: 20, maxHeight: "10%" }}>
+                <h1 style={{ textAlign: "right", marginBottom: "10px" }}>Показать:</h1>
                 <Radio.Group >
-                    <p style={{ display: "inline-block" }}><NavLink onClick={() => page("Биографию")} to="/info" ><Radio.Button>Биографию</Radio.Button></NavLink></p>
-                    <p style={{ display: "inline-block" }}><NavLink onClick={() => page("Проекты")} to="/projects" ><Radio.Button>Проекты</Radio.Button></NavLink></p>
-                    <p style={{ display: "inline-block" }}><NavLink onClick={() => page("Контакты")} to="/contacts" ><Radio.Button>Контакты</Radio.Button></NavLink></p>
-                    <p style={{ display: "inline-block" }}><NavLink onClick={() => page("Навыки")} to="/skills" ><Radio.Button>Навыки</Radio.Button></NavLink></p>
+                    <p style={{ display: "inline-block" }}><Radio.Button onClick={() => { page("Биографию"); setTimeout(() => { history.push("/info") }, 1000) }}>Биографию</Radio.Button></p>
+                    <p style={{ display: "inline-block" }}><Radio.Button onClick={() => { page("Проекты"); setTimeout(() => { history.push("/projects") }, 1000) }}>Проекты</Radio.Button></p>
+                    <p style={{ display: "inline-block" }}><Radio.Button onClick={() => { page("Навыки"); setTimeout(() => { history.push("/skills") }, 1000) }}>Навыки</Radio.Button></p>
+                    <p style={{ display: "inline-block" }}><Radio.Button onClick={() => { page("Контакты"); setTimeout(() => { history.push("/contacts") }, 1000) }}>Контакты</Radio.Button></p>
                 </Radio.Group>
             </div>
         </Block>

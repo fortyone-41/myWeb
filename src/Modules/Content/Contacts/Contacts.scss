@@ -3,6 +3,7 @@
     align-items: center;
     margin-top: 10px;
     height: 100%;
+    overflow: auto;
     width: 100%;
     .block {
       width: 100% !important;
@@ -102,4 +103,14 @@
       position:relative;
       z-index:5;
     }
+  }
+
+  .contacts::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+  }
+  
+  .contacts::-webkit-scrollbar-thumb {
+      border-radius: 2px;
+      background-color: rgba(0,0,0,0.5);
   }

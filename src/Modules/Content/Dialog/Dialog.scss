@@ -1,8 +1,9 @@
 .dialog {
     //grid-area: "dialog";
     
-    max-height: 100%;
+    max-height: 90%;
     overflow-y: auto;
+    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     -moz-overflow-scrolling: touch;
       -ms-overflow-scrolling: touch;
