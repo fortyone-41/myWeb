@@ -58,13 +58,13 @@ const Dialog = (props) => {
                 })
                 }
             </div>
-            <div style={{ position: "absolute", bottom: 10, right: 20 }}>
+            <div style={{ position: "absolute", bottom: 10, right: 20, width: "100%" }}>
                 <h1 style={{textAlign: "right", marginBottom: "10px"}}>Показать:</h1>
                 <Radio.Group >
-                    <p style={{ display: "inline-block" }}><NavLink onClick={() => page("Биографию")} to="/info" ><Radio.Button>Биографию</Radio.Button></NavLink></p>
+                    <p style={{ display: "inline-block", alignItems: "right" }}><NavLink onClick={() => page("Биографию")} to="/info" ><Radio.Button>Биографию</Radio.Button></NavLink></p>
                     <p style={{ display: "inline-block" }}><NavLink onClick={() => page("Проекты")} to="/projects" ><Radio.Button>Проекты</Radio.Button></NavLink></p>
                     <p style={{ display: "inline-block" }}><NavLink onClick={() => page("Контакты")} to="/contacts" ><Radio.Button>Контакты</Radio.Button></NavLink></p>
-                    <p style={{ display: "inline-block" }}><NavLink onClick={() => page("Навыки")} to="/skills" ><Radio.Button>Навыки</Radio.Button></NavLink></p>
+                    <p style={{ display: "inline-block", alignItems: "right" }}><NavLink onClick={() => page("Навыки")} to="/skills" ><Radio.Button>Навыки</Radio.Button></NavLink></p>
                 </Radio.Group>
             </div>
         </Block>
