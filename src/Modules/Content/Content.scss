@@ -26,8 +26,10 @@
   .view {
     height: 95%;
     //grid-area: "info";
+    
     width: 49.5%;
     @media (max-width: 768px) {
+      margin-top: 10px;
       height: 60%;
       width: 100%;
     }
