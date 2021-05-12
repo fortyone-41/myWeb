@@ -7,7 +7,7 @@ const ModalWindow = (props) => {
     const [visible, setVisible] = useState(false);
     return (
         <div>
-            <div style={{ height: '100%'}}>
+            <div style={{ height: '100vh'}}>
                     <section >
                         <Carousel effect="fade" autoplay>
                             {props.galery.map((photo) => {
