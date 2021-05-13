@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import './Block.scss'
 
 const Block = ({ children, className }) => (
-    <div style={{position: "relative"}} className={classNames("block", className)} >{children}</div>
+    <div className={classNames("block", className)} >{children}</div>
 )
 
 

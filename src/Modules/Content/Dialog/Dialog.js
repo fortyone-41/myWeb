@@ -5,6 +5,7 @@ import Message from '../../../Components/Message/Message'
 import Block from '../../../Components/Block/Block'
 import './Dialog.scss';
 import { useHistory } from "react-router-dom";
+import {Input} from 'reactstrap'
 
 const AVATAR = "https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png";
 
@@ -50,8 +51,25 @@ const Dialog = (props) => {
         }, 1000)
     }
     function page(link) {
-        // removeMessage();
         addMessage(link);
+        switch(link) {
+            case "Биографию": {
+                return setTimeout(() => { history.push("/info") }, 1000)
+            }
+            case "Биография": {
+                return setTimeout(() => { history.push("/info") }, 1000)
+            }
+            case "Проекты": {
+                return setTimeout(() => { history.push("/projects") }, 1000)
+            }
+            case "Навыки": {
+                return setTimeout(() => { history.push("/skills") }, 1000)
+            }
+            case "Контакты": {
+                return setTimeout(() => { history.push("/contacts") }, 1000)
+            }
+        }
+        
     }
     function removeMessage() {
         message.splice(message.length - 1, 1);
@@ -69,14 +87,25 @@ const Dialog = (props) => {
                 })
                 }
             </div>
-            <div style={{ position: "absolute", bottom: 10, right: 20, maxHeight: "10%" }}>
-                <h1 style={{ textAlign: "right", marginBottom: "10px" }}>Показать:</h1>
-                <Radio.Group >
-                    <p style={{ display: "inline-block" }}><Radio.Button onClick={() => { page("Биографию"); setTimeout(() => { history.push("/info") }, 1000) }}>Биографию</Radio.Button></p>
-                    <p style={{ display: "inline-block" }}><Radio.Button onClick={() => { page("Проекты"); setTimeout(() => { history.push("/projects") }, 1000) }}>Проекты</Radio.Button></p>
-                    <p style={{ display: "inline-block" }}><Radio.Button onClick={() => { page("Навыки"); setTimeout(() => { history.push("/skills") }, 1000) }}>Навыки</Radio.Button></p>
-                    <p style={{ display: "inline-block" }}><Radio.Button onClick={() => { page("Контакты"); setTimeout(() => { history.push("/contacts") }, 1000) }}>Контакты</Radio.Button></p>
-                </Radio.Group>
+            <div className="radiogr" >
+
+                
+                <button className="btn-styled" onClick={() => { page("Биографию"); setTimeout(() => { history.push("/info") }, 1000) }}>Биографию</button>
+                <button className="btn-styled" onClick={() => { page("Проекты"); setTimeout(() => { history.push("/projects") }, 1000) }}>Проекты</button>
+                <button className="btn-styled" onClick={() => { page("Навыки"); setTimeout(() => { history.push("/skills") }, 1000) }}>Навыки</button>
+                <button className="btn-styled" onClick={() => { page("Контакты"); setTimeout(() => { history.push("/contacts") }, 1000) }}>Контакты</button>
+                <h1 style={{ marginBottom: "10px" }}>Показать:  </h1>
+            </div>
+           
+            <div className="select-group" style={{width: "90%"}}>
+            
+            <Input type="select" onChange={(e) => { page(e.target.value) }} name="select" id="exampleSelect">
+                    <option selected="true" disabled="disabled">Что вас интересует?</option>
+                    <option>Биография</option>
+                    <option>Проекты</option>
+                    <option>Навыки</option>
+                    <option>Контакты</option>
+                </Input>
             </div>
         </Block>
     )

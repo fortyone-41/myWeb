@@ -1,23 +1,116 @@
 .dialog {
-    //grid-area: "dialog";
-    
-    max-height: 90%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    -moz-overflow-scrolling: touch;
-      -ms-overflow-scrolling: touch;
-      -o-overflow-scrolling: touch;
-    padding: 5%;
+  //grid-area: "dialog";
+  @media (max-width: 768px) {
+    height: 65%;
+  }
+  max-height: 90%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+  -ms-overflow-scrolling: touch;
+  -o-overflow-scrolling: touch;
+  padding: 5%;
+}
 
+.select-group {
+  width: 100%;
+  display: none;
+  @media (max-width: 768px) {
+    position: absolute;
+    display: block;
+    bottom: 30px;
+    right: 20px;
+    height: 10%;
+    width: 90%;
+    select {
+      width: 100%;
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 2px;
+      margin: 0 15px 15px 0;
+      outline: none;
+      border: none;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 17px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #385898;
+      background-color: #e7f3ff;
+      cursor: pointer;
+      user-select: none;
+      appearance: none;
+      touch-action: manipulation;
+      option {
+        text-align: center;
+        justify-content: center;
+      }
+    }
   }
-  
-  .dialog::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 7px;
+}
+
+.radiogr {
+  display: flex;
+  flex-direction: row-reverse;
+  border: 1px solid #ececec;
+  padding-top: 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+
+  height: 10%;
+  width: 90%;
+  overflow: hidden;
+  @media (max-width: 768px) {
+    display: none !important;
   }
-  
-  .dialog::-webkit-scrollbar-thumb {
-      border-radius: 2px;
-      background-color: rgba(0,0,0,0.5);
+  .btn-styled {
+    width: 20%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 2px;
+    margin: 0 15px 15px 0;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #385898;
+    background-color: #e7f3ff;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
   }
+  .btn-styled:focus-visible {
+    box-shadow: 0 0 0 2px #666;
+  }
+  .btn-styled:hover {
+    background-color: #dbe7f2;
+  }
+  .btn-styled:active {
+    transform: scale(0.96);
+  }
+  .btn-styled:disabled {
+    pointer-events: none;
+    opacity: 0.65;
+  }
+}
+
+.dialog::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+.dialog::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+}

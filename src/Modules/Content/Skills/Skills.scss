@@ -21,8 +21,9 @@
 .skills {
   text-align: center;
   align-items: center;
-  margin-top: 10px;
+  
   height: 100%;
+  border: 1px solid #dbd6d6;
   width: 100%;
   overflow: auto;
   animation: showing 1.5s;
@@ -35,6 +36,14 @@
     margin-right: 15px;
     margin-top: 15px;
     padding: 0;
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 18px;
+      }
+      h3 {
+        font-size: 12px;
+      }
+    }
  
   }
   .block {
