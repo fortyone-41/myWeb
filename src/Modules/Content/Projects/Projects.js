@@ -13,7 +13,7 @@ const Projects = () => {
     return (
         <div className="projects">
             <Tabs tabPosition="top" type="card" defaultActiveKey="1">
-                <TabPane tab={
+                <TabPane style={{backgroundImage: "linear-gradient(to top, rgb(250, 250, 249), rgb(194, 194, 174))"}} tab={
                     <span>
                         <ChromeOutlined />
                         Регистрация заявок
@@ -23,7 +23,7 @@ const Projects = () => {
                 >
                     <ModalWindow galery={Query} title="Регистрация заявок" tools="HTML, CSS, PHP, JS, MySQL" />
                 </TabPane>
-                <TabPane tab={
+                <TabPane style={{backgroundImage: "linear-gradient(to top, rgb(250, 250, 249), rgb(194, 194, 174))"}} tab={
                     <span>
                         <ChromeOutlined />
                     Планирование отпуска
@@ -33,7 +33,7 @@ const Projects = () => {
                 >
                     <ModalWindow galery={Plan} title="Планирование отпуска" tools="HTML, CSS, PHP, JS, MySQL" />
                 </TabPane>
-                <TabPane tab={
+                <TabPane style={{backgroundImage: "linear-gradient(to top, rgb(250, 250, 249), rgb(194, 194, 174))"}} tab={
                     <span>
                         <ChromeOutlined />
                     Сайт-визитка

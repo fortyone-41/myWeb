@@ -11,7 +11,8 @@ const Info = () => {
 
             <div className="card-container">
                 <Tabs type="card">
-                    <TabPane tab="Биография" key="1">
+                    <TabPane tab="Биография" style={{backgroundImage: "linear-gradient(to top, rgb(250, 250, 249), rgb(194, 194, 174))"}} key="1">
+                        <div>
                         <h1>Биография</h1>
                         <h2>
                             <p>ФИО: Лутцев Владимир Андреевич</p>
@@ -19,8 +20,9 @@ const Info = () => {
                             <p>Образование: Высшее(Информационные системы и технологии)</p> 
                             <p>"ФГБВОУ ВО Норильский Государственный Индустриальный Институт" г.Норильск</p>
                         </h2>
+                        </div>
                     </TabPane>
-                    <TabPane tab="Опыт работы" key="2">
+                    <TabPane tab="Опыт работы" style={{backgroundImage: "linear-gradient(to top, rgb(250, 250, 249), rgb(194, 194, 174))"}} key="2">
                         <Timeline mode="alternate">
                             <Timeline.Item>После окончания учебы, с 07.2017 работал фрилансером</Timeline.Item>
                             <Timeline.Item dot={<ClockCircleOutlined style={{ fontSize: '16px' }} />} color="green">05.05.2018 Устроился на работу в "ЗФ" НН-ОЦО</Timeline.Item>

@@ -6,7 +6,7 @@ const SkillItem = ({ item, ind }) => {
         if(localStorage.getItem("loaded") === "false") {
             setTimeout(() => {
                 setVisible("block")
-            }, 1000*(ind))
+            }, 500*(ind))
         } else {
             setVisible("block")
         } 

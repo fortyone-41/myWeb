@@ -17,11 +17,10 @@
   }
 }
 
-
 .skills {
   text-align: center;
   align-items: center;
-  
+
   height: 100%;
   border: 1px solid #dbd6d6;
   width: 100%;
@@ -32,19 +31,25 @@
   .skills-block {
     display: flex;
     justify-content: space-between;
+
     margin-left: 15px;
     margin-right: 15px;
     margin-top: 15px;
     padding: 0;
     @media (max-width: 768px) {
+      margin-left: 5px;
+      margin-right: 5px;
       h2 {
         font-size: 18px;
+        margin-bottom: 2px;
+        padding-bottom: 2px;
       }
       h3 {
         font-size: 12px;
+        margin-bottom: 2px;
+        padding-bottom: 2px;
       }
     }
- 
   }
   .block {
     width: 100% !important;
@@ -80,6 +85,6 @@
 }
 
 .skills::-webkit-scrollbar-thumb {
-    border-radius: 2px;
-    background-color: rgba(0,0,0,0.5);
+  border-radius: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
 }

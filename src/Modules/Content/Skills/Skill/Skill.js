@@ -6,7 +6,7 @@ const Skill = ({ item, ind, skills }) => {
     React.useEffect(() => {
         setTimeout(() => {
             setVisible("inline-block")
-        }, 1000*ind)
+        }, 500*ind)
     }, [])
     return (
         <div key={ind} style={{visible: visible}} className="bounce-enter-active">

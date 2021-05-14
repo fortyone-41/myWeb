@@ -4,6 +4,9 @@
   border-radius: 3px;
   overflow: auto;
   animation: showing 1.5s;
+  .bio {
+    background-color: rgb(247, 247, 239);
+  }
   h1 {
     font-size: 36px;
     font: bold;
@@ -21,6 +24,7 @@
     opacity: 0.5;
     padding-bottom: 5px;
   }
+  
   .card-container p {
     margin: 0;
   }

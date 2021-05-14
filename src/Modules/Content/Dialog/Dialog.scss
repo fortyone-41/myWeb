@@ -59,10 +59,11 @@
   flex-direction: row-reverse;
   border: 1px solid #ececec;
   padding-top: 10px;
+  border-radius: 9px;
   position: absolute;
   bottom: 10px;
   right: 20px;
-
+  background-image: linear-gradient(to left, rgb(230, 197, 197), rgb(236, 203, 190));
   height: 10%;
   width: 90%;
   overflow: hidden;
@@ -77,7 +78,7 @@
     margin: 0 15px 15px 0;
     outline: none;
     border: none;
-    border-radius: 6px;
+    border-radius: 0px 10px 10px 10px;
     height: 40px;
     line-height: 40px;
     font-size: 17px;
