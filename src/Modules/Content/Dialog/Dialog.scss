@@ -11,6 +11,7 @@
   -ms-overflow-scrolling: touch;
   -o-overflow-scrolling: touch;
   padding: 5%;
+  border: 1px solid #ececec;
 }
 
 .select-group {
@@ -63,8 +64,8 @@
   position: absolute;
   bottom: 10px;
   right: 20px;
-  background-image: linear-gradient(to left, rgb(230, 197, 197), rgb(236, 203, 190));
-  height: 10%;
+  background-image: linear-gradient(to left, rgb(150, 197, 197), rgb(236, 203, 190));
+  height: 7%;
   width: 90%;
   overflow: hidden;
   @media (max-width: 768px) {
